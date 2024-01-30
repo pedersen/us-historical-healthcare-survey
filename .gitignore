@@ -1,0 +1,4 @@
+# OpenTofu managed files
+.terraform.lock.hcl
+.terraform
+terraform.tfstate.backup
