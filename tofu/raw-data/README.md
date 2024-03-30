@@ -6,3 +6,6 @@
 * 1840 Census Data By County
 * [1850 Census Data By County](1850/1850a-14.pdf) : Downloaded 2024-03-24 from [census.gov](https://www2.census.gov/library/publications/decennial/1850/1850a/1850a-14.pdf)
 * [1860 Census Data by State/Territory and County](1860/retrieve.sh) : Downloaded 2024-03-30 from [census.gov](https://www.census.gov/library/publications/1864/dec/1860a.html). Used a script due to multiple PDFs being required.
+* [1870 Census Data By State/Territory and County](1870/retrieve.sh) : Downloaded 2024-03-30 from [census.gov](https://www.census.gov/library/publications/1872/dec/1870a.html). Used a script due to multiple PDFs being required.
+* [1880 Census Data By County](1880_v1-08.pdf) : Downloaded 2024-03-31 from [census.gov](https://www.census.gov/library/publications/1883/dec/vol-01-population.html)
+* 
