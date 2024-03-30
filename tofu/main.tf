@@ -29,31 +29,11 @@ resource "google_storage_bucket_access_control" "make-raw-publicly-readable" {
   entity = "allUsers"
 }
 
-resource "google_storage_bucket_object" "number-of-persons-1790-pdf" {
- name         = "1790-number-of-persons.pdf"
- source       = "${path.root}/raw-data/1790-number-of-persons.pdf"
- content_type = "application/pdf"
- bucket       = google_storage_bucket.raw-data.id
-}
+resource "google_storage_bucket_object" "census_data_raw_pdfs" {
+    for_each = fileset(path.module, "raw-data/*/*.pdf")
 
-resource "google_storage_bucket_object" "returns-1800-pdf" {
- name         = "1800-numbers.pdf"
- source       = "${path.root}/raw-data/1800-returns.pdf"
- content_type = "application/pdf"
- bucket       = google_storage_bucket.raw-data.id
+    name         = each.value
+    source       = each.value
+    content_type = "application/pdf"
+    bucket       = google_storage_bucket.raw-data.id
 }
-
-resource "google_storage_bucket_object" "returns-1820-pdf" {
- name         = "1820a-14.pdf"
- source       = "${path.root}/raw-data/1820a-02.pdf"
- content_type = "application/pdf"
- bucket       = google_storage_bucket.raw-data.id
-}
-
-resource "google_storage_bucket_object" "returns-1826-pdf" {
- name         = "1850a-02.pdf"
- source       = "${path.root}/raw-data/1850a-14.pdf"
- content_type = "application/pdf"
- bucket       = google_storage_bucket.raw-data.id
-}
-
