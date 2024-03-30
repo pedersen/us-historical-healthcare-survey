@@ -11,4 +11,5 @@
 * [1890 Census Data By County](1890/1890a_v1-06.pdf) : Downloaded 2024-03-30 from [census.gov](https://www.census.gov/library/publications/1895/dec/volume-1.html)
 * [1900 Census Data By County](1900/volume-1-p2.pdf): Downloaeed 2024-03-30 from [census.gov](https://www.census.gov/library/publications/1901/dec/vol-01-population.html)
 * [1910 Census Data By County](1910/volume-1-p3.pdf) : Downloaded 2024-03-30 from [census.gov](https://www.census.gov/library/publications/1913/dec/vol-1-population.html)
+* [1920 Census Data By County](1920/retrieve.sh) : Downloaded 2024-03-30 from [census.gov](https://www.census.gov/library/publications/1921/dec/vol-01-population.html)
 * 
