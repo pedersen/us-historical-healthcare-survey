@@ -9,4 +9,5 @@
 * [1870 Census Data By State/Territory and County](1870/retrieve.sh) : Downloaded 2024-03-30 from [census.gov](https://www.census.gov/library/publications/1872/dec/1870a.html). Used a script due to multiple PDFs being required.
 * [1880 Census Data By County](1880/1880_v1-08.pdf) : Downloaded 2024-03-30 from [census.gov](https://www.census.gov/library/publications/1883/dec/vol-01-population.html)
 * [1890 Census Data By County](1890/1890a_v1-06.pdf) : Downloaded 2024-03-30 from [census.gov](https://www.census.gov/library/publications/1895/dec/volume-1.html)
+* [1900 Census Data By County](1900/volume-1-p2.pdf): Downloaeed 2024-03-30 from [census.gov](https://www.census.gov/library/publications/1901/dec/vol-01-population.html)
 * 
