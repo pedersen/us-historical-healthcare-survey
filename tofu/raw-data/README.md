@@ -15,4 +15,5 @@
 * [1930 Census Data By County](1930/retrieve.sh) : Downloaded 2024-04-06 from [census.gov](https://www.census.gov/programs-surveys/decennial-census/decade/decennial-publications.1930.html)
 * [1940 Census Data By County](1940/retrieve.sh) : Downloaded 2024-04-06 from [census.gov](https://www.census.gov/library/publications/1942/dec/population-vol-1.html)
 * [1950 Census Data By County](1950/retrieve.sh) : Downloaded 2024-04-06 from [census.gov](https://www.census.gov/library/publications/1953/dec/housing-vol-01.html)
+* [1960 Census Data By County](1960/retrieve.sh) : Downloaded 2024-04-06 from [census.gov](https://www.census.gov/library/publications/1960/dec/population-pc-a1.html)
 * 
