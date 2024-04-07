@@ -16,8 +16,10 @@ locals {
     project_name   = "us-healthcare-survey"
     project_number = "145566699064"
     storage_prefix = "org-icelus-us-healthcare-survey"
+    email_address  = "datacyclist@gmail.com"
 }
 
+# Create raw data storage bucket, and upload PDFs
 resource "google_storage_bucket" "raw-data" {
     name           = "${local.storage_prefix}-raw"
     force_destroy  = false
@@ -40,10 +42,21 @@ resource "google_storage_bucket_object" "census_data_raw_pdfs" {
     bucket       = google_storage_bucket.raw-data.id
 }
 
+# Enable Google Vision API
 resource "google_project_service" "survey-and-vision-ocr" {
     project = local.project_id
     service = "vision.googleapis.com"
 
     disable_dependent_services = true
     disable_on_destroy         = true
+}
+
+# gcloud projects add-iam-policy-binding PROJECT_ID --member="user:EMAIL_ADDRESS" --role=roles/storage.objectViewer
+resource "google_project_iam_binding" "survey-and-vision-ocr-iam" {
+  project = local.project_id
+  role    = "roles/storage.objectViewer"
+
+  members = [
+    "user:${local.email_address}",
+  ]
 }
