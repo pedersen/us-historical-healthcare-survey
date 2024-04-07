@@ -1,25 +1,27 @@
 terraform {
     required_providers {
         google = {
-	    version = "~> 5.14.0"
-	}
+	        version = "~> 5.14.0"
+	    }
     }
 }
 
 provider "google" {
     project = "us-healthcare-survey"
-    region = "us-east4"
+    region  = "us-east4"
 }
 
-variable "storage_prefix" {
-    type = string
-    default = "org-icelus-us-healthcare-survey"
+locals {
+    project_id     = "us-healthcare-survey"
+    project_name   = "us-healthcare-survey"
+    project_number = "145566699064"
+    storage_prefix = "org-icelus-us-healthcare-survey"
 }
 
 resource "google_storage_bucket" "raw-data" {
-    name = "${var.storage_prefix}-raw"
-    force_destroy = false
-    location = "US"
+    name           = "${local.storage_prefix}-raw"
+    force_destroy  = false
+    location       = "US"
     requester_pays = true
 }
 
