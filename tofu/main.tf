@@ -39,3 +39,11 @@ resource "google_storage_bucket_object" "census_data_raw_pdfs" {
     content_type = "application/pdf"
     bucket       = google_storage_bucket.raw-data.id
 }
+
+resource "google_project_service" "survey-and-vision-ocr" {
+    project = local.project_id
+    service = "vision.googleapis.com"
+
+    disable_dependent_services = true
+    disable_on_destroy         = true
+}
